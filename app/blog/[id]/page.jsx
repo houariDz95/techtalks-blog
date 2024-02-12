@@ -125,7 +125,7 @@ const PostDetails =  async ({params: {id}}) => {
           first-letter:text-3xl
           sm:first-letter:text-5xl
           ">
-            {/*<div
+            <div
                 dangerouslySetInnerHTML={{
                   __html: blog.desc.replace(
                     /<h(\d)(.*?)>(.*?)<\/h\1>/g,
@@ -136,7 +136,7 @@ const PostDetails =  async ({params: {id}}) => {
                   ),
                 }}
                 className="blog-post prose-blockquote:bg-accent/20 prose-blockquote:p-2 prose-blockquote:px-6 prose-blockquote:border-accent prose-blockquote:not-italic prose-blockquote:rounded-r-lg dark:prose-invert dark:prose-blockquote:border-accentDark dark:prose-blockquote:bg-accentDark/20"
-              />*/}
+              />
           </div>
         </div>
       </article>
