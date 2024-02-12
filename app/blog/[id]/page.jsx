@@ -53,7 +53,6 @@ export async function generateMetadata({ params }) {
 
 const PostDetails =  async ({params: {id}}) => {
   const blog = await getBlogById(id)
-  const  newHeadings = blogContents(blog.desc)
   const jsonLd = {  
     "@context": "https://schema.org",
     "@type": "NewsArticle",
@@ -105,7 +104,7 @@ const PostDetails =  async ({params: {id}}) => {
         <BlogDetails blog={blog} />
         <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
           <div className="col-span-12  lg:col-span-4">
-              <TableOfContents desc={newHeadings} />
+              
           </div>
           <div className="col-span-12  lg:col-span-8 font-in prose sm:prose-base md:prose-lg max-w-max
           prose-blockquote:bg-accent/20 
