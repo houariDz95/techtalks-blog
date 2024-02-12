@@ -53,10 +53,28 @@ export async function generateMetadata({ params }) {
 
 const PostDetails =  async ({params: {id}}) => {
   const blog = await getBlogById(id)
-  
+  const  newHeadings = blogContents(blog.desc)
+  const jsonLd = {  
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": blog.title,
+    "description": blog.desc,
+    "image": blog.img,
+    "datePublished": new Date(blog.createdAt).toISOString(),
+    "dateModified": new Date(blog.updatedAt || blog.createdAt).toISOString(),
+    "author": [{
+        "@type": "Person",
+        "name": blog?.author 
+        
+      }]
+  }
 
   return ( 
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <article>
         <div className="mb-8 text-center relative w-full h-[70vh] bg-dark">
           <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -87,7 +105,7 @@ const PostDetails =  async ({params: {id}}) => {
         <BlogDetails blog={blog} />
         <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
           <div className="col-span-12  lg:col-span-4">
-              
+              <TableOfContents desc={newHeadings} />
           </div>
           <div className="col-span-12  lg:col-span-8 font-in prose sm:prose-base md:prose-lg max-w-max
           prose-blockquote:bg-accent/20 
@@ -107,7 +125,18 @@ const PostDetails =  async ({params: {id}}) => {
           first-letter:text-3xl
           sm:first-letter:text-5xl
           ">
-           
+            <div
+                dangerouslySetInnerHTML={{
+                  __html: blog.desc.replace(
+                    /<h(\d)(.*?)>(.*?)<\/h\1>/g,
+                    (match, level, attributes, content) => {
+                      const id = content.toLowerCase().replace(/\s+/g, '-');
+                      return `<h${level}${attributes} id="${id}">${content}</h${level}>`;
+                    }
+                  ),
+                }}
+                className="blog-post prose-blockquote:bg-accent/20 prose-blockquote:p-2 prose-blockquote:px-6 prose-blockquote:border-accent prose-blockquote:not-italic prose-blockquote:rounded-r-lg dark:prose-invert dark:prose-blockquote:border-accentDark dark:prose-blockquote:bg-accentDark/20"
+              />
           </div>
         </div>
       </article>
