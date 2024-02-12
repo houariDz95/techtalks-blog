@@ -48,7 +48,7 @@ const Navbar = () => {
     {
       href: `/blog`,
       label: 'Blog',
-      active: pathname === `/blog`,
+      active: pathname.includes(`/blog`),
     },
     {
       href: `/contact`,
@@ -67,7 +67,7 @@ const Navbar = () => {
             <TechtalksLogo />
             <div className="hidden md:flex gap-4 flex-1 items-center justify-start">
               {routes.map((link) => (
-                <NavLink link={link} key={link.title} />
+                <NavLink link={link} key={link.label} />
               ))}
             </div>
             <div className="hidden sm:flex flex-1 justify-end items-center gap-4">
@@ -117,7 +117,7 @@ const Navbar = () => {
                 <motion.div
                   variants={listItemVariants}
                   className="p-2 border-b"
-                  key={link.title}
+                  key={link.label}
                 >
                   <Link href={link.href}>{link.label}</Link>
                 </motion.div>

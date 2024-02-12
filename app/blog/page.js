@@ -28,7 +28,6 @@ const BlogsPage = async (paramsKey) => {
         </span>
       </div>
       <Categories categories={categories} currentSlug={query} />
-      <PopularBlogs blogs={popular} />
       <div className="grid  grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 grid-rows-2 gap-16  px-5 sm:px-10 md:px-24 sxl:px-32 pt-10">
         {blogs.map((blog, index) => (
           <article key={blog._id} className="col-span-1 row-span-1 relative">
@@ -43,6 +42,7 @@ const BlogsPage = async (paramsKey) => {
           </h2>
         </div>
       )}
+      <PopularBlogs blogs={popular} />
     </article>
   )
 }

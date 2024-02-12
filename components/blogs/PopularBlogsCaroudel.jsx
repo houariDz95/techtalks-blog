@@ -15,8 +15,8 @@ import Link from "next/link"
 import { format } from "date-fns"
 
 export function PopularBlogsCarousel({blogs}) {
-    console.log(blogs)
-    const plugin = React.useRef(
+
+  const plugin = React.useRef(
       Autoplay({ delay: 2000, stopOnInteraction: true })
     )
   return (
