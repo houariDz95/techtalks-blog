@@ -53,27 +53,10 @@ export async function generateMetadata({ params }) {
 
 const PostDetails =  async ({params: {id}}) => {
   const blog = await getBlogById(id)
-  const jsonLd = {  
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
-    "headline": blog.title,
-    "description": blog.desc,
-    "image": blog.img,
-    "datePublished": new Date(blog.createdAt).toISOString(),
-    "dateModified": new Date(blog.updatedAt || blog.createdAt).toISOString(),
-    "author": [{
-        "@type": "Person",
-        "name": blog?.author 
-        
-      }]
-  }
+  
 
   return ( 
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <article>
         <div className="mb-8 text-center relative w-full h-[70vh] bg-dark">
           <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
