@@ -42,13 +42,13 @@ const FeaturedPosts = ({ blogs }) => {
           className="col-span-2 sxl:col-span-1 row-span-2 relative"
           variants={itemVariants}
         >
-          <BlogLayoutOne blog={blogs[0]} />
+          <BlogLayoutOne blog={blogs[1]} />
         </motion.article>
         <motion.article
           className="col-span-2 sm:col-span-1 row-span-1 relative"
           variants={itemVariants}
         >
-          <BlogLayoutTwo blog={blogs[1]} />
+          <BlogLayoutTwo blog={blogs[0]} />
         </motion.article>
         <motion.article
           className="col-span-2 sm:col-span-1 row-span-1 relative"

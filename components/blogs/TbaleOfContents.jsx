@@ -1,6 +1,6 @@
 "use client"
 
-const TableOfContents = ({desc}) => {
+const TableOfContents = ({headings}) => {
   return (
     <div className="col-span-12  lg:col-span-4">
       <details
@@ -11,7 +11,7 @@ const TableOfContents = ({desc}) => {
               Table Of Content
             </summary>
             <ul className="mt-4 font-in text-base">
-              {desc.map((heading) => {
+              {headings.map((heading) => {
                 return (
                   <li key={`#${heading.id}`} className="py-1">
                     <a
