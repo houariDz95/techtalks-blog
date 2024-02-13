@@ -16,10 +16,10 @@ const BlogLayoutOne = ({ blog }) => {
         placeholder="blur"
         blurDataURL={blog.img}
         alt={blog.title}
-        width={600}
-        height={456}
+        width={800}
+        height={820}
         className="w-full h-full object-center object-cover rounded-xl group-hover:scale-105 transition-all ease duration-300"
-        
+        sizes="(max-width: 1180px) 100vw, 50vw"
       />
 
       <div className="w-full absolute bottom-0 p-4 xs:p-6 sm:p-10 z-20">

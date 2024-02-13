@@ -32,31 +32,17 @@ const FeaturedPosts = ({ blogs }) => {
         Featured Posts
       </motion.h2>
 
-      <motion.div
-        className="grid grid-cols-2 grid-rows-2 gap-6 mt-10 sm:mt-16"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.article
-          className="col-span-2 sxl:col-span-1 row-span-2 relative"
-          variants={itemVariants}
-        >
-          <BlogLayoutOne blog={blogs[1]} />
-        </motion.article>
-        <motion.article
-          className="col-span-2 sm:col-span-1 row-span-1 relative"
-          variants={itemVariants}
-        >
-          <BlogLayoutTwo blog={blogs[0]} />
-        </motion.article>
-        <motion.article
-          className="col-span-2 sm:col-span-1 row-span-1 relative"
-          variants={itemVariants}
-        >
-          <BlogLayoutTwo blog={blogs[2]} />
-        </motion.article>
-      </motion.div>
+      <div className="grid grid-cols-2 grid-rows-2 gap-6  mt-10 sm:mt-16">
+        <article className=" col-span-2  sxl:col-span-1 row-span-2 relative">
+          <BlogLayoutOne blog={blogs[2]} />
+        </article>
+        <article className=" col-span-2 sm:col-span-1 row-span-1 relative">
+                  <BlogLayoutTwo blog={blogs[0]} />
+        </article>
+        <article className="col-span-2 sm:col-span-1 row-span-1 relative">
+                  <BlogLayoutTwo blog={blogs[1]} />
+        </article>
+    </div>
     </motion.section>
   );
 };
