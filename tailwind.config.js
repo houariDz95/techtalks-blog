@@ -72,10 +72,14 @@ module.exports = {
           to: { height: "0" },
         },
       },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "roll": "roll 24s linear infinite"
+      animation:{
+        roll: "roll 24s linear infinite"
+      },
+      keyframes:{
+        roll:{
+          "0%": {transform: "translateX(100%)"},
+          "100%": {transform: "translateX(-100%)"}
+        }
       },
       screens:{
         sxl: "1180px",

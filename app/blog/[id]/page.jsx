@@ -53,6 +53,7 @@ export async function generateMetadata({ params }) {
 
 const PostDetails =  async ({params: {id}}) => {
   const blog = await getBlogById(id)
+  console.log(blog)
   const  newHeadings = blogContents(blog.desc)
   const jsonLd = {  
     "@context": "https://schema.org",

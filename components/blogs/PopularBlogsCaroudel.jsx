@@ -33,7 +33,7 @@ export function PopularBlogsCarousel({blogs}) {
     >
       <CarouselContent>
         {blogs.map((blog, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4 sxl:basis-1/5 w-full my-10">
+          <CarouselItem key={index} className="basis-1/2 lg:basis-1/4 sxl:basis-1/5 w-full my-10">
             <div className="group relative w-full h-full  inline-block overflow-hidden rounded-xl">
                 <Image 
                     src={blog.img}

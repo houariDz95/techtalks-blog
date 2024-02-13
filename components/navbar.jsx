@@ -60,7 +60,7 @@ const Navbar = () => {
   return (
     <>
       <div className={cn(
-      "z-50 bg-background dark:bg-[#1F1F1F] lg:fixed top-0  w-full py-6 lg:px-6",
+      "z-50 bg-background dark:bg-[#1F1F1F] fixed top-0  w-full py-6 lg:px-6",
       scrolled && "border-b shadow-sm"
     )}>
           <div className="flex w-full items-center gap-4 px-4 justify-between">
@@ -111,7 +111,7 @@ const Navbar = () => {
               variants={listVariants}
               initial="closed"
               animate="opened"
-              className="w-screen flex flex-col md:hidden bg-accent/50"
+              className="w-screen flex flex-col md:hidden bg-accent/50 mt-4 shadow-sm"
             >
               {routes.map((link) => (
                 <motion.div

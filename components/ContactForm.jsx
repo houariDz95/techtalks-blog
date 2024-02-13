@@ -5,7 +5,8 @@ import { z } from "zod"
 import { Input } from "./ui/input"
 import { Form, FormControl, FormField, FormItem, FormMessage } from "./ui/form"
 import { Textarea } from "./ui/textarea"
-
+import { useState } from "react"
+import emailjs from "@emailjs/browser";
 
 const formSchema = z.object({
   name: z.string().min(2),
@@ -17,6 +18,8 @@ const formSchema = z.object({
 
 const ContactForm = () => {
 
+  const [loading, setLoading] = useState(false);
+
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -27,8 +30,32 @@ const ContactForm = () => {
       })
     
       function onSubmit(values) {
-
-        console.log(values)
+        setLoading(true);
+        emailjs
+        .send(
+          "service_ju1sy6t",
+          "template_sk29j9p",
+          {
+            from_name: values.name,
+            to_name: "Houari Eddrief",
+            from_email: values.email,
+            to_email: "houarieddrief7@gmail.com",
+            message: values.descreption,
+          },
+          "spAR_S3PprgIQIWc_"
+        )
+        .then(
+          () => {
+            setLoading(false);
+            alert("Thank you. I will get back to you as soon as possible.");
+          },
+          (error) => {
+            setLoading(false);
+            console.error(error);
+  
+            alert("Ahh, something went wrong. Please try again.");
+          }
+        );
       }
 
   return (
@@ -40,7 +67,7 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Your Name" {...field} />
+                <Input placeholder="Your Name" {...field} disabled={loading}  />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -52,7 +79,7 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Email Address" {...field} />
+                <Input placeholder="Email Address" {...field} disabled={loading}  />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -64,14 +91,14 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Textarea placeholder="Message" {...field} cols="6" />
+                <Textarea placeholder="Message" {...field} cols="6" disabled={loading} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <button type="submit" className="mt-8 font-medium inline-block capitalize text-lg sm:text-xl py-2 sm:py-3 px-6 sm:px-8 border-2 border-solid border-dark dark:border-light rounded cursor-pointer">
-          send request
+        <button disabled={loading} type="submit" className="disabled:cursor-not-allowed disabled:opacity-50 mt-8 font-medium inline-block capitalize text-lg sm:text-xl py-2 sm:py-3 px-6 sm:px-8 border-2 border-solid border-dark dark:border-light rounded cursor-pointer">
+          {loading ? "Sending..." : "send request"}
         </button>
       </form>
     </Form>

@@ -6,7 +6,7 @@ const siteMetadata = {
     description: 'Explore the latest in technology with our insightful articles, reviews, and trends. Stay ahead in the tech game with our go-to source for innovation, gadgets, and digital discoveries. Join us on the journey to explore the future, one byte at a time. #TechBlog #Innovation #Gadgets',
     language: 'en-us',
     theme: 'system', // system, dark or light
-    siteUrl: 'https://www.rukn-books.org/', // your website URL
+    siteUrl: 'https://techtalks-blog.netlify.app', // your website URL
     siteLogo: '/logo.svg',
     socialBanner: '/social-banner.png', // add social banner in the public folder
     email: 'houedd608@gmail.com', //

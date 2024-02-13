@@ -2,7 +2,6 @@ import { getPopularBlogs, getRecentBlogs } from '@/lib/actions'
 import React from 'react'
 import TechtalksLogo from './ui/logo';
 import Link from 'next/link';
-import { ArrowUp } from 'lucide-react';
 import ScrollTop from './ScrollTop';
 
 const routes = [
@@ -29,7 +28,7 @@ const Footer = async  () => {
   const popularPosts = await  getPopularBlogs();
   return (
     <>
-    <footer className='flex flex-wrap pt-6 px-5 sm:px-10 md:px-24 sxl:px-32 shadow-sm justify-center md:justify-between'>
+    <footer className='flex  mt-16 sm:mt-24  md:mt-32 flex-wrap pt-6 bg-gradient-to-t from-transparent to-accent dark:to-dark px-5 sm:px-10 md:px-24 sxl:px-32 justify-center text-center md:text-start md:justify-between'>
       <div className='w-full md:w-1/3 lg:w-1/4 xl:w-1/5 mb-8'>
         <TechtalksLogo />
         <p className='mt-4 text-sm'>
