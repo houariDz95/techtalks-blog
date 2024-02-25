@@ -9,7 +9,7 @@ const siteMetadata = {
     siteUrl: 'https://techtalks-blog.netlify.app', // your website URL
     siteLogo: '/logo.svg',
     socialBanner: '/social-banner.png', // add social banner in the public folder
-    email: 'houedd608@gmail.com', //
+    email: 'blogginggroup54@gmail.com', //
     github: 'https://github.com/houariDz95',
     twitter: 'https://twitter.com/',
     facebook: 'https://facebook.com',
