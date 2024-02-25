@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://techtalks-blog.netlify.app
+
+# Sitemaps
+Sitemap: https://techtalks-blog.netlify.app/sitemap.xml

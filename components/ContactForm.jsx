@@ -33,16 +33,16 @@ const ContactForm = () => {
         setLoading(true);
         emailjs
         .send(
-          "service_ju1sy6t",
+          "service_gl8fl6f",
           "template_sk29j9p",
           {
             from_name: values.name,
-            to_name: "Houari Eddrief",
+            to_name: "Blogging Group",
             from_email: values.email,
-            to_email: "houarieddrief7@gmail.com",
+            to_email: "blogginggroup54@gmail.com",
             message: values.descreption,
           },
-          "spAR_S3PprgIQIWc_"
+          "EYu1M4KYvU9C4pdvi"
         )
         .then(
           () => {
