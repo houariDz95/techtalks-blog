@@ -2,12 +2,12 @@ import FeaturedPosts from "@/components/home/featured";
 import { Heading } from "@/components/home/heading";
 import { Heroes } from "@/components/home/heros";
 import RecentPosts from "@/components/home/recent-post";
-import { getBlogs, getRecentBlogs } from "@/lib/actions";
+import { getBlogs, getFeaturedBlogs, getRecentBlogs } from "@/lib/actions";
 
 export default async function Home() {
   const allBlogs = await getBlogs();
   const recenttBlogs = await getRecentBlogs();
-
+  const featuredBlogs = await getFeaturedBlogs();
   return (
     <main className="pt-40">
       <div className="min-h-full flex flex-col">
@@ -16,7 +16,7 @@ export default async function Home() {
           <Heroes />
         </div>
       </div>
-      <FeaturedPosts blogs={allBlogs} />
+      <FeaturedPosts blogs={featuredBlogs} />
       <RecentPosts blogs={recenttBlogs} />
     </main>
   )
