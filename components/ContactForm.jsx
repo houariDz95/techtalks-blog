@@ -34,7 +34,7 @@ const ContactForm = () => {
         emailjs
         .send(
           "service_gl8fl6f",
-          "template_sk29j9p",
+          "template_6ywayss",
           {
             from_name: values.name,
             to_name: "Blogging Group",

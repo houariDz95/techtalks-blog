@@ -11,7 +11,7 @@ const TechtalksLogo = () => {
   return (
     <Link href="/" className="md:flex items-center">
         <p className="font-semibold">
-            <span className={cn('text-2xl font-bold text-accentSoft dark:text-accentDark', pacifico.className)}>T</span>echtalks
+            <span className={cn('text-2xl font-bold text-accentSoft dark:text-accentDark', pacifico.className)}>T</span>echHubTalks
         </p>
     </Link>
   );
