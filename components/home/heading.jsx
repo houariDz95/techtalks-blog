@@ -21,7 +21,7 @@ export const Heading = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         Your Ideas, Documents, & Plans. Unified. Welcome to{" "}
-        <span className="underline">Techtalks</span>
+        <span className="underline">TechHubTalks</span>
       </motion.h1>
       <motion.h3
         className="text-base sm:text-xl md:text-2xl font-medium"
@@ -29,7 +29,7 @@ export const Heading = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
       >
-        Techtalks is the connected workspace where <br />
+        TechHubTalks is the connected workspace where <br />
         better, faster work happens.
       </motion.h3>
       <motion.div

@@ -24,7 +24,7 @@ const AboutDetails = () => {
                 initial="hidden"
                 animate="visible"
                 className="bg-accentSoft dark:bg-accentDark text-white dark:text-accent text-center py-8">
-                <h1 className="text-4xl font-bold">TECHTALKS</h1>
+                <h1 className="text-4xl font-bold">TechHubTalks</h1>
                 <p className="mt-2">Your Gateway to Tomorrow&apos;s Technology</p>
             </motion.header>
 
@@ -92,9 +92,9 @@ const AboutDetails = () => {
                 animate="visible"
                 className="bg-gray-200 py-8">
                 <div className="container mx-auto text-center">
-                    <p className="text-gray-700">At TECHTALKS, we believe that technology should be accessible, exciting, and
+                    <p className="text-gray-700">At TechHubTalks, we believe that technology should be accessible, exciting, and
                         transformative. Join us on this journey as we navigate the digital frontier together. Welcome to the
-                        future – welcome to TECHTALKS
+                        future – welcome to TechHubTalks
                     </p>
                 </div>
             </motion.section>

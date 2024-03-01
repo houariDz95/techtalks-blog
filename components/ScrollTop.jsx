@@ -2,6 +2,7 @@
 
 import { ArrowUp } from 'lucide-react';
 import React, { useEffect, useState } from 'react'
+import { Button } from './ui/button';
 
 const ScrollTop = () => {
     const [showScrollButton, setShowScrollButton] = useState(false);
@@ -25,12 +26,14 @@ const ScrollTop = () => {
   return (
     <>
     {showScrollButton && (
-        <button
-          className='fixed bottom-8 right-8 bg-accentSoft dark:bg-accentDark dark:text-dark text-white py-2 px-4 rounded-full shadow-md text-primary focus:outline-none'
+        <Button
+          size="icon"
+          variant="ghost"
+          className='fixed bottom-8 right-8 bg-accentSoft dark:bg-accentDark dark:text-dark text-white rounded-full shadow-md  focus:outline-none'
           onClick={scrollToTop}
         >
           <ArrowUp className='w-7 h-7' />
-        </button>
+        </Button>
       )}
     </>
   )

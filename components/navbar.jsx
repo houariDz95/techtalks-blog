@@ -55,6 +55,11 @@ const Navbar = () => {
       label: 'Contact',
       active: pathname === `/contact`,
     },
+    {
+      href: `/write-for-us`,
+      label: 'Write for us',
+      active: pathname === `/write-for-us`,
+    },
   ]
 
   return (
@@ -65,7 +70,7 @@ const Navbar = () => {
     )}>
           <div className="flex w-full items-center gap-4 px-4 justify-between">
             <TechtalksLogo />
-            <div className="hidden md:flex gap-4 flex-1 items-center justify-start">
+            <div className="hidden md:flex gap-4 flex-1 justify-start">
               {routes.map((link) => (
                 <NavLink link={link} key={link.label} />
               ))}

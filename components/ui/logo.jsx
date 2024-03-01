@@ -9,10 +9,10 @@ const pacifico = Pacifico({
 })
 const TechtalksLogo = () => {
   return (
-    <Link href="/" className="md:flex items-center">
-        <p className="font-semibold">
-            <span className={cn('text-2xl font-bold text-accentSoft dark:text-accentDark', pacifico.className)}>T</span>echHubTalks
-        </p>
+    <Link href="/">
+      <p className="text-accentSoft dark:text-accentDark text-2xl font-semibold">
+        TechHub<span className="text-gray">Talks</span>
+      </p>
     </Link>
   );
 };
