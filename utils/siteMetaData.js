@@ -1,12 +1,12 @@
 // please update required information
 const siteMetadata = {
-    title: 'Techtalks - Your Guide to Financial and Health Prosperity',
+    title: 'TechHubTalks - Your Guide to Financial and Health Prosperity',
     author: 'houEddDev',
-    headerTitle: 'Techtalks',
+    headerTitle: 'TechHubTalks',
     description: 'Explore the latest in technology with our insightful articles, reviews, and trends. Stay ahead in the tech game with our go-to source for innovation, gadgets, and digital discoveries. Join us on the journey to explore the future, one byte at a time. #TechBlog #Innovation #Gadgets',
     language: 'en-us',
     theme: 'system', // system, dark or light
-    siteUrl: 'https://techtalks-blog.netlify.app', // your website URL
+    siteUrl: 'https://techhubtalks.pro', // your website URL
     siteLogo: '/logo.svg',
     socialBanner: '/social-banner.png', // add social banner in the public folder
     email: 'blogginggroup54@gmail.com', //
