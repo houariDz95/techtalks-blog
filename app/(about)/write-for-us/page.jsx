@@ -14,7 +14,7 @@ const WriteForUsPage = () => {
       
       <section className="my-8">
         <h2 className="text-2xl font-bold mb-4 text-accentSoft dark:text-accentDark">Guest Post Guidelines</h2>
-        <p className="text-gray-600">We welcome guest contributions that align with our blog's focus. Please follow these guidelines when submitting your guest post:</p>
+        <p className="text-gray-600">We welcome guest contributions that align with our blog`&apos;`s focus. Please follow these guidelines when submitting your guest post:</p>
         <ul className="list-disc pl-8">
           <li>Content should be well-researched and unique.</li>
           <li>Preferred length: 800 - 1500 words.</li>
