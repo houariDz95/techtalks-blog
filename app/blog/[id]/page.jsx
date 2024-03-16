@@ -1,3 +1,4 @@
+import Banner_720 from "@/banners/banner_720"
 import TableOfContents from "@/components/blogs/TbaleOfContents"
 import BlogDetails from "@/components/blogs/blogDetils"
 import Tag from "@/components/elements/tag"
@@ -5,6 +6,7 @@ import { getBlogById } from "@/lib/actions"
 import { blogContents } from "@/lib/utils"
 import siteMetadata from "@/utils/siteMetaData"
 import Image from "next/image"
+import Script from "next/script"
 
 export async function generateMetadata({ params }) {
   const blog = await getBlogById(params.id);
@@ -129,7 +131,12 @@ const PostDetails =  async ({params: {id}}) => {
           first-letter:text-3xl
           sm:first-letter:text-5xl
           ">
+            <Banner_720 />
             <div dangerouslySetInnerHTML={{ __html: parsedHtml }} />
+            <div className='w-full flex items-center justify-center'>
+              <Script async="async" data-cfasync="false" src="//pl22804567.profitablegatecpm.com/5b48461d1df0df8c885d3a87e2782f79/invoke.js" />
+            <div id="container-5b48461d1df0df8c885d3a87e2782f79"></div>
+        </div>
           </div>
         </div>
       </article>
