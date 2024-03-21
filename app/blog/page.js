@@ -30,9 +30,6 @@ const BlogsPage = async (paramsKey) => {
         </span>
       </div>
       <Categories categories={categories} currentSlug={query} />
-      <div className='max-w-[720px] mx-auto p-4'>
-        <Banner_720 />
-      </div>
       <div className="grid  grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 grid-rows-2 gap-16  px-5 sm:px-10 md:px-24 sxl:px-32 pt-10 mt-10">
         {blogs.map((blog, index) => (
           <article key={blog._id} className="col-span-1 row-span-1 relative">
@@ -47,10 +44,6 @@ const BlogsPage = async (paramsKey) => {
           </h2>
         </div>
       )}
-      <div className='w-full flex items-center justify-center'>
-        <Script async="async" data-cfasync="false" src="//pl22804567.profitablegatecpm.com/5b48461d1df0df8c885d3a87e2782f79/invoke.js" />
-        <div id="container-5b48461d1df0df8c885d3a87e2782f79"></div>
-      </div>
       <PopularBlogs blogs={popular} />
     </article>
   )

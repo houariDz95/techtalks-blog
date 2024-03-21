@@ -131,12 +131,7 @@ const PostDetails =  async ({params: {id}}) => {
           first-letter:text-3xl
           sm:first-letter:text-5xl
           ">
-            <Banner_720 />
             <div dangerouslySetInnerHTML={{ __html: parsedHtml }} />
-            <div className='w-full flex items-center justify-center'>
-              <Script async="async" data-cfasync="false" src="//pl22804567.profitablegatecpm.com/5b48461d1df0df8c885d3a87e2782f79/invoke.js" />
-            <div id="container-5b48461d1df0df8c885d3a87e2782f79"></div>
-        </div>
           </div>
         </div>
       </article>
